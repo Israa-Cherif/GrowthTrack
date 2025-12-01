@@ -1,1 +1,1 @@
-"# GrowthTrack - Mon projet m‚dical" 
+"# GrowthTrack - Mon projet medical" 
