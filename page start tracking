@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GrowTrack — Start Tracking</title>
+  <link rel="stylesheet" href="v.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">GrowTrack</div>
+      <nav class="top-nav">
+        <a href="index.html">Accueil</a>
+        <a href="#form-section">Services</a>
+        <a href="#table-section">Votre suivi</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="form-section" class="panel hero-panel">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1>Start tracking your baby's health</h1>
+          <p class="lead">Remplis le formulaire ci-dessous pour commencer le suivi. Les données sont affichées dans le tableau — tu peux aussi ajouter les coordonnées du médecin (optionnel).</p>
+        </div>
+
+        <div class="hero-right upload-card">
+          <label for="imageInput" class="upload-label">
+            <div class="upload-thumb" id="uploadBox">
+              <img id="previewImage" alt="Aperçu" />
+              <div class="upload-text">Cliquez pour ajouter la photo du bébé</div>
+            </div>
+          </label>
+          <input id="imageInput" type="file" accept="image/*" class="hidden-file" />
+          <small class="muted">Format conseillé : JPG / PNG — taille ≤ 5MB</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel form-panel">
+      <div class="container">
+        <h2>Informations de l'enfant</h2>
+
+        <form id="trackingForm" class="form-grid" novalidate>
+          <!-- Baby info -->
+          <div class="form-group">
+            <label>Nom de l'enfant *</label>
+            <input id="babyName" type="text" placeholder="Ex : Lina" required />
+          </div>
+
+          <div class="form-group">
+            <label>Âge (mois) *</label>
+            <input id="babyAge" type="number" min="0" step="1" placeholder="Ex : 48" required />
+          </div>
+
+          <div class="form-group">
+            <label>Taille (cm) *</label>
+            <input id="height" type="number" min="1" step="0.1" placeholder="Ex : 102" required />
+          </div>
+
+          <div class="form-group">
+            <label>Poids (kg) *</label>
+            <input id="weight" type="number" min="0.1" step="0.1" placeholder="Ex : 15.5" required />
+          </div>
+
+          <div class="form-group full">
+            <label>Allergies / Notes médicales</label>
+            <textarea id="notes" rows="2" placeholder="Ex : asthme léger, allergie aux noix..."></textarea>
+          </div>
+
+          <!-- Doctor info (optional) -->
+          <div class="form-divider">Coordonnées du médecin (optionnel)</div>
+
+          <div class="form-group">
+            <label>Nom du médecin</label>
+            <input id="doctorName" type="text" placeholder="Dr. Ahmed" />
+          </div>
+
+          <div class="form-group">
+            <label>Téléphone du médecin</label>
+            <input id="doctorPhone" type="tel" placeholder="+216 98 123 456" />
+          </div>
+
+          <div class="form-group full">
+            <label>Email du médecin</label>
+            <input id="doctorEmail" type="email" placeholder="doc@example.com" />
+          </div>
+
+          <div class="form-actions full">
+            <button id="addRowBtn" type="button" class="btn primary">Ajouter au tableau</button>
+            <button id="resetBtn" type="reset" class="btn ghost">Réinitialiser</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="table-section" class="panel table-panel">
+      <div class="container">
+        <h2>Historique & Tableau</h2>
+        <div class="table-wrap">
+          <table id="trackingTable" class="styled-table">
+            <thead>
+              <tr>
+                <th>Photo</th>
+                <th>Nom</th>
+                <th>Âge (mois)</th>
+                <th>Taille (cm)</th>
+                <th>Poids (kg)</th>
+                <th>Notes</th>
+                <th>Médecin</th>
+                <th>Tel</th>
+                <th>Email</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- rows ajoutées via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 GrowTrack</div>
+      <div class="contacts">
+        <a href="mailto:contact@growtrack.com">contact@growtrack.com</a>
+        <a href="tel:+15551234567">+1 (555) 123-4567</a>
+        <a href="https://instagram.com/growtrack" target="_blank">Instagram</a>
+        <a href="https://linkedin.com/company/growtrack" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="v.js"></script>
+</body>
+</html>
+
