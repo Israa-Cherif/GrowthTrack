@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowthTrack - Upload Photo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container-custom {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #imagePreview {
+            max-width: 100%;
+            margin: 20px 0;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🌱 GrowthTrack</a>
+        </div>
+    </nav>
+
+
+    <div class="container-custom">
+        <h1 class="text-center mb-5">📸 Prendre une Photo</h1>
+
+        <div class="alert alert-info">
+            <h5>Comment prendre une bonne photo :</h5>
+            <ul>
+                <li>Enfant debout contre un mur</li>
+                <li>Feuille A4 visible à côté</li>
+                <li>Photo bien droite</li>
+                <li>Bon éclairage</li>
+            </ul>
+        </div>
+
+        <!-- Upload -->
+        <div class="card">
+            <div class="card-body text-center">
+                <h5>Choisir une Photo</h5>
+
+                <input type="file" id="photoInput" accept="image/*" class="form-control mb-3">
+                <!--accepte n'autirise l'accès q'aux images, tout autre fichier est bloqué-->
+
+                <img id="imagePreview">
+
+                <!-- Message -->
+                <div id="message" class="mt-3"></div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="mt-4 text-center">
+            <a href="index.html" class="btn btn-secondary me-2">Retour</a>
+            <button id="nextBtn" class="btn btn-primary" disabled>Suivant</button>
+        </div>
+    </div>
+
+    <script>
+        // Code JavaScript SIMPLIFIÉ
+        const photoInput = document.getElementById('photoInput');
+        const imagePreview = document.getElementById('imagePreview');
+        const nextBtn = document.getElementById('nextBtn');
+        const messageDiv = document.getElementById('message');
+
+        // Quand on choisit un fichier
+        photoInput.addEventListener('change', function (e) {
+            const file = e.target.files[0];
+
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    // Affiche l'image directement
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+
+                    // Active le bouton
+                    nextBtn.disabled = false;
+                    messageDiv.innerHTML = '<div class="alert alert-success">Photo prête !</div>';
+                };
+
+                reader.readAsDataURL(file);
+            } else {
+                messageDiv.innerHTML = '<div class="alert alert-danger">Choisissez une image valide</div>';
+            }
+        });
+
+        // Bouton suivant
+        nextBtn.addEventListener('click', function () {
+            if (imagePreview.style.display !== 'none') {
+                // Sauvegarde simple
+                localStorage.setItem('photo', imagePreview.src);
+                window.location.href = 'measure.html';
+            }
+        });
+    </script>
+    <!--
+    e:rapport complet de l'évènement: contient toutes les informations sur ce qui s'est passé: quel élément a été cliqué,quelle heure était, les fichiers séléctionnés,..
+    target:cible de l'évènement: exp:1er exp: input de fichier
+    files:liste des fichiers choisis
+    new FileReader():objet, usine
+    reader.onload: lecture achevée
+    .style: le style css
+    .style.display:comment l'élément s'affiche
+    'block': visible comme un bloc
+    .disabled=false: change l'état de bouton
+    .innerHTML: remplacer le contenu d'un html (ici on remplace messageDiv)
+    .readAsDataURL:machine de l'usine capable de convertir les fichiers en formats utilisables par le navigateur we
+    localStorage.setItem('photo', imagePreview.src):
+        localStorage:stockage local de navigateur
+        .setItem: enregistrer un élément
+        'photo':le nom souslequel on sauvgarde
+        imagePreview.src: url de l'image affichée
+    window.location.href = 'measure.html':
+        window:le fenetre de navigateur
+        .location:emplacement actuel
+    -->
+</body>
+
+</html>
