@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrowTrack • Baby Diseases Info</title>
+  <link rel="stylesheet" href="disease.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">GrowTrack</div>
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="tracking.html">Track Your Baby</a>
+        <a href="baby-diseases.html">Baby's Health Info</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-2">
+    <div class="container">
+      <h1>Common Baby Diseases</h1>
+      <p>Learn about common childhood diseases, how to detect them early, prevent them, and best care practices.</p>
+    </div>
+  </section>
+
+  <!-- TABLE -->
+  <section class="table-section">
+    <div class="container">
+      <table class="disease-table">
+        <thead>
+          <tr>
+            <th>Disease</th>
+            <th>Origin</th>
+            <th>Signs & Symptoms</th>
+            <th>How to Detect</th>
+            <th>Prevention</th>
+            <th>Care Tips</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Chickenpox</td>
+            <td>Varicella zoster virus</td>
+            <td>Red itchy spots, fever, fatigue</td>
+            <td>Appearance of rashes and fever</td>
+            <td>Vaccination, avoid infected persons</td>
+            <td>Keep skin clean, calm itching with creams, rest</td>
+          </tr>
+          <tr>
+            <td>Measles</td>
+            <td>Measles virus</td>
+            <td>Rash, cough, runny nose, fever</td>
+            <td>Characteristic rash and symptoms</td>
+            <td>Vaccination</td>
+            <td>Hydration, rest, consult doctor if severe</td>
+          </tr>
+          <tr>
+            <td>Whooping Cough</td>
+            <td>Bordetella pertussis bacteria</td>
+            <td>Severe coughing, vomiting after cough</td>
+            <td>Persistent coughing fits</td>
+            <td>Vaccination, avoid exposure</td>
+            <td>Keep baby hydrated, monitor breathing</td>
+          </tr>
+          <tr>
+            <td>Hand, Foot & Mouth</td>
+            <td>Coxsackievirus</td>
+            <td>Blisters on hands, feet, mouth, fever</td>
+            <td>Blisters and fever observation</td>
+            <td>Good hygiene, avoid infected kids</td>
+            <td>Soft diet, hydration, clean skin</td>
+          </tr>
+          <tr>
+            <td>Respiratory Syncytial Virus (RSV)</td>
+            <td>RSV virus</td>
+            <td>Coughing, wheezing, trouble breathing</td>
+            <td>Breathing difficulty, cold-like symptoms</td>
+            <td>Avoid crowded areas, hand hygiene</td>
+            <td>Consult doctor if breathing difficulty</td>
+          </tr>
+          <!-- Tu peux rajouter autant de maladies que tu veux -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>© 2025 GrowTrack — All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="disease.js"></script>
+</body>
+</html>
