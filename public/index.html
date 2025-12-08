@@ -2,114 +2,81 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <!--règle l'affichage pour qu'il s'adapte automatiquemment aux télephones et tablettes
-        viewport: zone visible à l'écran
-        "width=device-width": prend toute la largeur de l'appareil
-        initial-scale="1.0": affiche à 100% sans zoom-->
-    <title>GrowthTrack - Acceuil</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--CHARGEMENT DE BOOTSTRAP : framework CSS pour le design, permet un design professionnel-->
-    <style>
-        .hero-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .feature-card {
-            border: none;
-            box-shadow: 0 4px 6px rgb a(0, 0, 0, 0, 1);
-            margin-bottom: 20px;
-        }
-    </style>
-    <!--
-    .hero-section: style pour la section principale
-    *fond dégradé bleu-violet
-    *texte en blanc
-    *espacement de 80px en haut/bas, 0 à gauche /droite
-    *texte centré
-    .feature-card:style pour les cartes de features
-    *pas de bordure visible
-    *ombre légère pour effet 3D
-    *espace de 20px en dessous de chaque carte
-    -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GrowthTrack - Accueil</title>
+  <!-- Bootstrap (bib pour simplifier l'utilisation de css) pour un design propre mais standard -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/index.css" />
 </head>
 
 <body>
-    <!--NAVIGATION-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">🌱 GrowthTrack</a>
-        </div>
-        </div>
-    </nav>
-    <!--
-    c'est la barre de navigation:
-    div: boite de rangement
-    chaque class a ses propriétés de styles,..
-    exp: navbar-brand: en gras, *1.5 taille normale
-    navbar: active le style et comportement navbar
-    navbar-expand-lg: sur grands écran, montre tout le menu. 
-                      sur petits écran, cache le menu dans un burger (≡)
+  <!-- Navigation -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🌱 GrowthTrack</a>
+    </div>
+  </nav>
+  <!--navbar: active le style et comportement navbar
     navbar-dark: utilise un texte clair sur un fond sombre
-    bg-dark: fond de couleur sombre
-    container: le contenu
-    navbar-brand: logo/titre de l'application
-    -->
-    <!--SECTION HERO-->
-    <section class="hero-section">
-        <div class="container">
-            <h1 class="display-4">Suivi Digital de Croissance Pédiatrique</h1>
-            <p class="lead">Application innovante pour le suivi des troubles de croissances chez l'enfant</p>
-            <a href="upload_photo.html" class="btn btn-light btn-lg mt-3">Commencer</a>
-        </div>
-    </section>
-    <!-- btn-light: couleur de bouton clair
-     btn-lg: boton large
-     mt-3: le bouten est au dessous du texte de 3 unités-->
+    bg-dark: fond de couleur sombre-->
 
-    <!--FEATURES-->
-    <section class="container my-5">
-        <div class="row">
-            <div class="col">
-                <div class="card feature-card">
-                    <div class="card-body text-center">
-                        <h3>📸</h3>
-                        <h5>Analyse par photo</h5>
-                        <p>Mesure précise grâce à l'analyse d'image et calibration A4</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card feature-card">
-                    <div class="card-body text-center">
-                        <h3>📊</h3>
-                        <h5>Courbes de croissance</h5>
-                        <p>Visualisation professionnelle avec courbes OMS</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card feature-card">
-                    <div class="card-body text-center">
-                        <h3>⚡</h3>
-                        <h5>Suivi continu</h5>
-                        <p>Détection précoce des ralentissements de croissance</p>
-                    </div>
-                </div>
-            </div>
+  <!-- Section hero  -->
+  <section class="section-hero">
+    <div class="container">
+      <h1>Suivi de Croissance Pédiatrique</h1>
+      <p class="lead">
+        Une application pour suivre la croissance des enfants
+      </p>
+      <a href="upload_photo.html" class="btn btn-light btn-lg">Commencer</a>
+    </div>
+  </section>
+
+  <!-- Features  -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Fonctionnalités</h2>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h4>📸</h4>
+          <h5>Photo</h5>
+          <p>Prendre une photo pour mesurer</p>
         </div>
-    </section>
-    <!--class="row": meme ligne
-    class="col-md-4": colonne 4/12-->
-    <footer class="bg-dark text-white text-center py-4 ">
-        <div class="container">
-            <p>GrowthTrack - Projet Médical innovant</p>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h4>📊</h4>
+          <h5>Courbes</h5>
+          <p>Voir l'évolution de la croissance</p>
         </div>
-    </footer>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h4>⚡</h4>
+          <h5>Suivi</h5>
+          <p>Surveiller la croissance régulièrement</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pied de page standard -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>Projet étudiant - GrowthTrack</p>
+    </div>
+  </footer>
+  <!-- m:margin
+ p:padding
+ t:top
+ b:bottom
+ x:gauche/droite
+ y:haut/bas
+ 0-5: taille (0=0px, 1=4px, 2=8px, 3=16px, 4=24px, 5=48px)
+ md: medium 4/12 colonnes-->
 </body>
 
 </html>

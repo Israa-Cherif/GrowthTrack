@@ -1,0 +1,15 @@
+.section-hero {
+    background-color: #6761dc;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.feature-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: white;
+}

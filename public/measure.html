@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GrowthTrack - Mesure</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/measure.css" />
+
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🌱 GrowthTrack</a>
+    </div>
+  </nav>
+
+  <div class="container-custom">
+    <h1 class="text-center mb-4">📏 Mesurer la Taille</h1>
+
+    <!--<div class="step">-->
+    <div>
+      <h5>Étapes :</h5>
+      <ol>
+        <li>
+          <strong>Calibrage :</strong> Clique sur les 4 coins de la feuille A4
+        </li>
+        <li>
+          <strong>Mesure :</strong> Clique sur la tête et les pieds de
+          l'enfant
+        </li>
+      </ol>
+    </div>
+
+    <!-- Zone de mesure -->
+    <div class="text-center">
+      <canvas id="measureCanvas"></canvas>
+    </div>
+    <!--
+    canvas: zone de dession html5
+    -->
+    <script src="js/measure.js"></script>
+    <!-- Résultats -->
+    <div class="mt-3">
+      <h5>Résultat :</h5>
+      <p id="result" style="display: none">
+        <!--style="display: none": por cacher le résultat-->
+        <strong>📏 Taille estimée : <span id="sizeValue">0</span> cm</strong>
+      </p>
+    </div>
+
+    <!-- Actions -->
+    <div class="text-center mt-5">
+      <button id="resetBtn" class="btn btn-outline-danger">
+        🔄 Recommencer
+      </button>
+      <button id="saveBtn" class="btn btn-success" disabled>
+        💾 Sauvegarder
+      </button>
+      <a href="chart.html" class="btn btn-primary">📊 Voir les courbes</a>
+      <!--
+      <input type="button" id="resetBtn" value="🔄 Recommencer">
+
+      <input type="button" id="saveBtn" value="💾 Sauvegarder" disabled>
+
+      <input type="button" id="seeCharts" value="📊 Voir les courbes" onclick="location.href='chart.html'">
+    -->
+    </div>
+  </div>
+
+</body>
+
+</html>

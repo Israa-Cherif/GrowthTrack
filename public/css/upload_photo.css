@@ -1,0 +1,11 @@
+.container-custom {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#imagePreview {
+    max-width: 100%;
+    margin: 20px 0;
+    display: none;
+}
